@@ -12,8 +12,12 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isSprinting;
     private bool isWalking;
-    [SerializeField] private float jumpSpeed = 5f;
-    [SerializeField] private float movingSpeed = 5f, sprintingMoveSpeed = 10f, walkingSpeed = 2f, moveSpeed;
+    private float jumpSpeed;
+    private float movingSpeed;
+    private float sprintingMoveSpeed;
+    private float sneakingSpeed; 
+    private float moveSpeed;
+    [SerializeField] PlayerScriptableObject playerScriptableObject;
     private void Awake()
     {
         isGrounded = true;
@@ -25,6 +29,13 @@ public class Player : MonoBehaviour
         playerInputActions.Player.Sprint.canceled += Stop_Sprinting;
         playerInputActions.Player.Walk.performed += Start_Walking;
         playerInputActions.Player.Walk.canceled += Stop_Walking;
+    }
+
+    private void Start() {
+        jumpSpeed = playerScriptableObject.JumpSpeed;
+        movingSpeed = playerScriptableObject.DefaultMovingSpeed;
+        sprintingMoveSpeed = playerScriptableObject.SprintingSpeed;
+        sneakingSpeed = playerScriptableObject.SneakingSpeed;
     }
 
     private void Start_Sprinting(InputAction.CallbackContext context)
@@ -91,7 +102,7 @@ public class Player : MonoBehaviour
         }
         else if(isWalking && isGrounded)
         {
-            moveSpeed = walkingSpeed;
+            moveSpeed = sneakingSpeed;
         }
 
     }
