@@ -389,9 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee4219a6ff4cca409b9e27c96878084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 5
-  moveSpeed: 5
-  sprintedMoveSpeed: 10
+  playerScriptableObject: {fileID: 11400000, guid: 84480f756eba1584cb0a0f0c53eae594, type: 2}
 --- !u!50 &940962033
 Rigidbody2D:
   serializedVersion: 4

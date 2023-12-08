@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8bf800bcf96eb40a947fd6e7ba314d, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: 7086105f199ce0b45b24a771a80e2081, type: 3}
+  m_Name: HumanEnemyUzman
   m_EditorClassIdentifier: 
-  jumpSpeed: 5
-  defaultMovingSpeed: 5
-  sprintingSpeed: 8
-  sneakingSpeed: 2
+  sprite: {fileID: 0}
+  defaultMovingSpeed: 0
+  sprintingSpeed: 0
+  visionRadius: 0
