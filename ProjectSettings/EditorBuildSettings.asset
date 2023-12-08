@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Onur.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 906807d85909b5e4587a78032b462a74
+  - enabled: 1
+    path: Assets/Scenes/Yalandanoyun.unity
+    guid: cc58882663e51c64091afc225742239a
   m_configObjects: {}
