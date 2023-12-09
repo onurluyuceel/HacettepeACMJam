@@ -42,9 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+<<<<<<< Updated upstream
                     "name": "Miuw",
                     "type": "Button",
                     "id": "f17b989c-786c-46e4-94ff-9677da5f0916",
+=======
+                    "name": "ShadowHide",
+                    "type": "Button",
+                    "id": "5b0e8a68-fa6e-4ac0-abe7-4bb449fe16c7",
+>>>>>>> Stashed changes
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -153,12 +159,21 @@
                 },
                 {
                     "name": "",
+<<<<<<< Updated upstream
                     "id": "b935c794-9b1c-4882-b323-87a38b729086",
                     "path": "<Keyboard>/m",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Miuw",
+=======
+                    "id": "437dca14-d44c-4905-9f0d-a0bb26bbe215",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShadowHide",
+>>>>>>> Stashed changes
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

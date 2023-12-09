@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8bf800bcf96eb40a947fd6e7ba314d, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Scripts/ScriptableObjects/Player.asset
   jumpSpeed: 5
   defaultMovingSpeed: 5
   sprintingSpeed: 8
   sneakingSpeed: 2
+=======
+  jumpSpeed: 10
+  defaultMovingSpeed: 10
+  sprintingSpeed: 10
+  sneakingSpeed: 10
+>>>>>>> Stashed changes:Assets/Scripts/Player.asset
