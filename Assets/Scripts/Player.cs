@@ -4,14 +4,20 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip miuwClip;
+    [SerializeField] private UnityEvent miuw;
     private string OBSTACLE_TAG = "Obstacle";
     private PlayerInputActions playerInputActions;
     private Rigidbody2D playerRigidbody2D;
     private bool isGrounded;
     private bool isSprinting;
     private bool isWalking;
+    private float lastMiuwTime;
+    private float miuwCooldown = 2f;
     private float jumpSpeed;
     private float movingSpeed;
     private float sprintingMoveSpeed;
@@ -29,6 +35,7 @@ public class Player : MonoBehaviour
         playerInputActions.Player.Sprint.canceled += Stop_Sprinting;
         playerInputActions.Player.Walk.performed += Start_Walking;
         playerInputActions.Player.Walk.canceled += Stop_Walking;
+        playerInputActions.Player.Miuw.performed += Miuw_Performed;
     }
 
     private void Start() {
@@ -38,6 +45,14 @@ public class Player : MonoBehaviour
         sneakingSpeed = playerScriptableObject.SneakingSpeed;
     }
 
+    private void Miuw_Performed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Miuwing();
+        }
+
+    }
     private void Start_Sprinting(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -112,6 +127,16 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag(OBSTACLE_TAG))
         {
             isGrounded = true;
+        }
+    }
+
+    public void Miuwing()
+    {
+        if (Time.time - lastMiuwTime >= miuwCooldown)
+        {
+            audioSource.clip = miuwClip;
+            audioSource.Play();
+            lastMiuwTime = Time.time;
         }
     }
 }

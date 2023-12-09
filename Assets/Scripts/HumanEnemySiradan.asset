@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HumanEnemySiradan
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  defaultMovingSpeed: 0
-  sprintingSpeed: 0
-  visionRadius: 0
+  defaultMovingSpeed: 1000
+  sprintingSpeed: 2000
+  visionRadius: 2
